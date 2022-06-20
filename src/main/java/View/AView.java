@@ -181,11 +181,13 @@ public abstract class AView implements Initializable, IView{
     public void saveConfigurations(ActionEvent actionEvent) {
         /*set the properties - threadPoolSize, generateAlgo, solvingAlgo that the player changed at the options, if any */
         int num;
+        Configurations config;
+        config=Configurations.getInstance();
         if(threadsNum.getText()!="") {
             try{
                 num = Integer.valueOf(threadsNum.getText());
                 if(num>0)
-                    Configurations.setThreadPoolSize(num);
+                    config.addProperty("threadPoolSize",Integer.toString(num));
                 else
                     throw new NumberFormatException();
             }
@@ -196,9 +198,9 @@ public abstract class AView implements Initializable, IView{
             }
         }
         if(generate.getValue()!=null)
-            Configurations.setMazeGeneratingAlgorithm(generate.getValue().toString());
+            config.addProperty("mazeGeneratingAlgorithm",generate.getValue().toString());
         if(solve.getValue()!=null)
-            Configurations.setMazeSearchingAlgorithm(solve.getValue().toString());
+            config.addProperty("mazeSearchingAlgorithm",solve.getValue().toString());
         Node source = (Node)  actionEvent.getSource();
         Stage stage  = (Stage) source.getScene().getWindow();
         stage.close();

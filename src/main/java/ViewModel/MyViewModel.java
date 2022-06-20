@@ -37,7 +37,7 @@ public class MyViewModel extends Observable implements Observer {
 
     public int[][] getSolution() {return model.getSolution(); }
 
-    public int[] getHint() {return model.getHint();}
+   // public int[] getHint() {return model.getHint();}
 
     public int getPlayerRow() {return model.getPlayerRow(); }
 
@@ -57,7 +57,7 @@ public class MyViewModel extends Observable implements Observer {
         model.solveMaze();
     }
 
-    public void setHint() {model.setHint(); }
+    //public void setHint() {model.setHint(); }
 
     public void movePlayer(KeyEvent keyEvent){
         //receives a key event from myViewModel, check which key was pressed,

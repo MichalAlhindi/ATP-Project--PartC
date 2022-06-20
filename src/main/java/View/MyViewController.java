@@ -96,14 +96,14 @@ public class MyViewController extends AView implements Observer {
         mazeDisplayer.requestFocus();
     }
 
-    public void getHint(ActionEvent actionEvent) {
-        //event handler for the button 'Hint'
-        //calls VM to generate a hint
-        myViewModel.setHint();
-        buttonSolveMaze.setSelected(false);
-        //to make it more easy for the user, after the hind is generated they can start without pressing on the mazeDisplayer's pane
-        mazeDisplayer.requestFocus();
-    }
+//    public void getHint(ActionEvent actionEvent) {
+//        //event handler for the button 'Hint'
+//        //calls VM to generate a hint
+//        myViewModel.setHint();
+//        buttonSolveMaze.setSelected(false);
+//        //to make it more easy for the user, after the hind is generated they can start without pressing on the mazeDisplayer's pane
+//        mazeDisplayer.requestFocus();
+//    }
 
     private void drawMaze(){
         //this func is bounded to the size properties of the stages and changes the  sizes of the maze if neeeded
@@ -184,7 +184,7 @@ public class MyViewController extends AView implements Observer {
             switch (change) {
                 case "maze generated"-> mazeGenerated();
                 case "player moved" -> playerMoved();
-                case "hint generated" -> hintGenerated();
+               // case "hint generated" -> hintGenerated();
                 case "maze solved" -> mazeSolved();
                 case "goal reached" ->goalReached();
             }
@@ -206,12 +206,12 @@ public class MyViewController extends AView implements Observer {
         int[][] solution = myViewModel.getSolution();
         mazeDisplayer.drawSolution(solution);
     }
-
-    private void hintGenerated() {
-        //Model has created a hint for the maze, we receive it and draw it with mazeDisplayer
-        int[] hint = myViewModel.getHint();
-        mazeDisplayer.drawHint(hint);
-    }
+//
+//    private void hintGenerated() {
+//        //Model has created a hint for the maze, we receive it and draw it with mazeDisplayer
+//        int[] hint = myViewModel.getHint();
+//        mazeDisplayer.drawHint(hint);
+//    }
 
     private void playerMoved() {
         //Model has moved the player (based on mouse/keyborad event), we update the player position
