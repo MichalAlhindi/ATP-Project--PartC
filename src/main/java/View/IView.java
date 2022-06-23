@@ -14,5 +14,5 @@ public interface IView {
     void help(MouseEvent mouseEvent);
     void about(MouseEvent mouseEvent);
     void exit();
-    void muteUnmute(ActionEvent actionEvent);
+    //void muteUnmute(ActionEvent actionEvent);
 }

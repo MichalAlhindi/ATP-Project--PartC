@@ -20,6 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import View.*?>
+<?import javafx.scene.layout.Pane?>
 <BorderPane onMouseClicked="#mouseClicked" prefHeight="566.0" prefWidth="650.0" stylesheets="@MyStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MyViewController">
     <left>
         <VBox prefHeight="200.0" prefWidth="178.0" spacing="5.0" BorderPane.alignment="CENTER">
@@ -47,13 +48,15 @@
                     <TextField fx:id="textField_mazeRows" text="10" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                     <TextField fx:id="textField_mazeColumns" text="10" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                     <Button onAction="#generateMaze" prefHeight="45.0" prefWidth="167.0" text="Generate Maze" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+<!--
                     <Button fx:id="buttonHint" cancelButton="true" disable="true" onAction="#getHint" prefHeight="25.0" prefWidth="167.0" text="Hint" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+-->
                     <RadioButton fx:id="buttonSolveMaze" disable="true" mnemonicParsing="false" onAction="#solveMaze" text="Solve Maze" textFill="WHITE" GridPane.rowIndex="7">
                         <font>
                             <Font name="System Bold Italic" size="16.0" />
-                        </font></RadioButton>
+<!--                        </font></RadioButton>
                     <RadioButton fx:id="muteButton" mnemonicParsing="false" onAction="#muteUnmute" text="Mute" textFill="WHITE" GridPane.rowIndex="8">
-                        <font>
+                        <font>-->
                             <Font name="System Bold" size="16.0" />
                         </font></RadioButton>
                 </GridPane>
@@ -124,13 +127,31 @@
             </children>
         </VBox>
     </top>
+
     <center>
+        <Pane BorderPane.alignment="CENTER">
+            <children>
+<!--
+                <MazeDisplayer fx:id="mazeDisplayer" height="383.0" imageFileNameGoal="./resources/images/goal.jpg" imageFileNamePlayer="./resources/images/Dori.jpg" imageFileNameWall="./resources/images/Wall.jpg" layoutX="16.0" onKeyPressed="#keyPressed"  width="384.0" />
+-->
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </Pane>
+    </center>
+
+    <!--<center>
         <ScrollPane fx:id="scrollPane" BorderPane.alignment="CENTER">
+
             <content>
+
                 <Group>
-                    <MazeDisplayer fx:id="mazeDisplayer" height="400.0" imageFileNameGoal="./resources/images/characters_goals/couch.png" imageFileNamePlayer="./resources/images/characters_goals/monica.png" imageFileNameWall="./resources/images/coffee.png" onKeyPressed="#keyPressed" onMouseDragged="#dragCharacter" onMousePressed="#startDrag" onMouseReleased="#stopDrag" onScroll="#zoom" width="400.0" />
+&lt;!&ndash;
+                    <MazeDisplayer fx:id="mazeDisplayer" height="200.0" imageFileNameGoal="./resources/images/goal.jpg" imageFileNamePlayer="./resources/images/Dori.jpg" imageFileNameWall="./resources/images/Wall.jpg"                 onKeyPressed="#keyPressed" onMouseDragged="#dragCharacter" onMousePressed="#startDrag" onMouseReleased="#stopDrag" onScroll="#zoom" width="200.0" />
+&ndash;&gt;
                 </Group>
             </content>
         </ScrollPane>
-    </center>
+    </center>-->
 </BorderPane>

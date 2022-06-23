@@ -7,7 +7,8 @@ ScrollPane{
 }
 
 BorderPane{
-    -fx-background-image: url("//resources/images/brickwall.jpg");
+    -fx-background-image: url("//resources/images/Wall.jpg");
+   /* "//resources/images/Wall.jpg"*/
     -fx-background-size: stretch;
 }
 Label{

@@ -11,8 +11,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+//import javafx.scene.media.Media;
+//import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -26,14 +26,14 @@ public abstract class AView implements Initializable, IView{
     public ChoiceBox generate;
     public ChoiceBox solve;
     public TextField threadsNum;
-    protected static MediaPlayer player;
+    //protected static MediaPlayer player;
     static boolean alreadyPlay=false;
     protected static boolean musicState=true;
 
 
 
-    public void setMusic(Media song){
-        /*set the mediaPlayer with the media, and call playMusic*/
+    /*public void setMusic(Media song){
+        *//*set the mediaPlayer with the media, and call playMusic*//*
         if(player!=null)
             player.pause();
         player = new MediaPlayer(song);
@@ -41,7 +41,7 @@ public abstract class AView implements Initializable, IView{
     }
 
     public void playMusic(){
-        /*set the properties of the mediaPlayer*/
+        *//*set the properties of the mediaPlayer*//*
         player.setAutoPlay(musicState);
         player.setVolume(0.4);
         player.setOnEndOfMedia(new Runnable() { //repeat the music
@@ -49,7 +49,7 @@ public abstract class AView implements Initializable, IView{
                 player.seek(Duration.ZERO);
             }
         });
-    }
+    }*/
 
     public void setStage(Stage Stage) {
         this.stage = Stage;
@@ -153,14 +153,14 @@ public abstract class AView implements Initializable, IView{
         Platform.exit();
     }
 
-    public void muteUnmute(ActionEvent actionEvent) {
-        /*check if the mediaPlayer is on or off and change it */
+/*    public void muteUnmute(ActionEvent actionEvent) {
+        *//*check if the mediaPlayer is on or off and change it *//*
         if(musicState)
             player.pause();
         else
             player.play();
         musicState=!musicState;
-    }
+    }*/
 
     public Alert showAlert(Alert.AlertType type,String title, String message) {
         /*show an alert with the properties type,title and message*/

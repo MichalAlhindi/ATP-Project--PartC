@@ -5,8 +5,8 @@ import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.input.*;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
+//import javafx.scene.media.Media;
+//import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -20,16 +20,16 @@ public class MyViewController extends AView implements Observer {
     public MazeDisplayer mazeDisplayer;
     public Label lbl_PlayerRow;
     public Label lbl_PlayerCol;
-    public Button buttonHint;
+    //public Button buttonHint;
     public RadioButton buttonSolveMaze;
     public MenuItem buttonSave;
     public ScrollPane scrollPane;
     public RadioButton muteButton;
     private int [][] maze;
 
-    Media mazeSong = new Media(getClass().getResource("../music/mazeSong.mp3").toExternalForm());
+    /*Media mazeSong = new Media(getClass().getResource("../music/mazeSong.mp3").toExternalForm());
     Media winSong = new Media(getClass().getResource("../music/winSong.mp3").toExternalForm());
-
+*/
     StringProperty updatePlayerRow = new SimpleStringProperty();
     StringProperty updatePlayerCol = new SimpleStringProperty();
     private boolean dragOnPlayer=false;
@@ -49,9 +49,9 @@ public class MyViewController extends AView implements Observer {
         stage.widthProperty().addListener(event -> drawMaze());
         stage.heightProperty().addListener(event -> drawMaze());
         //change the music to mazeSong and check if user already muted it
-        setMusic(mazeSong);
+/*        setMusic(mazeSong);
         if(!musicState)
-            muteButton.setSelected(true);
+            muteButton.setSelected(true);*/
     }
 
     @Override
@@ -125,7 +125,7 @@ public class MyViewController extends AView implements Observer {
     @Override
     public void setChosenChar(String chosenChar) {
         //when character is chosen, myViewController changes the image of the player for mazeDisplayer
-        String filePath = "./resources/images/characters_goals/"+chosenChar+".png";
+        String filePath = "./resources/images/"+chosenChar+".jpg";
         mazeDisplayer.setImageFileNamePlayer(filePath);
         super.setChosenChar(chosenChar);
     }
@@ -226,13 +226,13 @@ public class MyViewController extends AView implements Observer {
     private void goalReached() {
         //playing winning music
         //information about winning
-        MediaPlayer winPlayer = new MediaPlayer(winSong);
+/*        MediaPlayer winPlayer = new MediaPlayer(winSong);
         winPlayer.setAutoPlay(true);
         winPlayer.setVolume(0.4);
         winPlayer.setStopTime(new Duration(3000));
 
         Alert alert = showAlert(Alert.AlertType.INFORMATION,"winner!!!","Congratulations, you won!\nfriends have reached the couch!!");
-        alert.setOnCloseRequest(e->winPlayer.pause());
+        alert.setOnCloseRequest(e->winPlayer.pause());*/
     }
 
     public void startDrag(MouseEvent e){
@@ -280,6 +280,6 @@ public class MyViewController extends AView implements Observer {
         buttonSolveMaze.setSelected(false);
         buttonSolveMaze.setDisable(false);
         buttonSave.setDisable(false);
-        buttonHint.setDisable(false);
+        //buttonHint.setDisable(false);
     }
 }

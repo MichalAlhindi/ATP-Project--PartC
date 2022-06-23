@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="chooseBackground" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.MainViewController">
+    <children>
+        <StackPane layoutX="-1.0" prefHeight="586.0" prefWidth="743.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Group StackPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="Adam" layoutX="-232.0" layoutY="-16.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="120.0" prefWidth="120.0" />
+                        <Button fx:id="Avi" layoutX="-96.0" layoutY="-17.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="120.0" prefWidth="120.0">
+                            <graphic>
+                                <ImageView fx:id="AviImage" fitHeight="110.0" fitWidth="110.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                        <Button fx:id="Aya" layoutX="46.0" layoutY="-17.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="120.0" prefWidth="120.0">
+                            <graphic>
+                                <ImageView fx:id="AyaImage" fitHeight="110.0" fitWidth="110.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                        <Button fx:id="Dori" layoutX="-234.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="120.0" prefWidth="120.0">
+                            <graphic>
+                                <ImageView fx:id="DoriImage" fitHeight="110.0" fitWidth="110.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                        <Button fx:id="Mika" layoutX="-95.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="120.0" prefWidth="120.0">
+                            <graphic>
+                                <ImageView fx:id="MikaImage" fitHeight="110.0" fitWidth="110.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                        <Button fx:id="Natasha" layoutX="49.0" layoutY="124.0" mnemonicParsing="false" onMouseClicked="#chooseChar" prefHeight="120.0" prefWidth="120.0" />
+                        <Button fx:id="buttonBack" layoutX="-319.0" layoutY="104.0" onAction="#backToMain" prefHeight="31.0" prefWidth="65.0" text="&lt; back" />
+                        <Button fx:id="buttonPlay" layoutX="356.0" layoutY="104.0" onAction="#newGame" prefHeight="31.0" prefWidth="65.0" text="play &gt;" />
+                        <Label fx:id="chooseLabel" layoutX="-19.0" layoutY="-110.0" prefHeight="70.0" prefWidth="170.0" text="Choose Character">
+                     <font>
+                        <Font size="21.0" />
+                     </font></Label>
+                          <ImageView fx:id="AdamImage" fitHeight="110.0" fitWidth="110.0" layoutX="-227.0" layoutY="-11.0" onMouseClicked="#chooseChar" pickOnBounds="true" />
+                  <Button id="Nini" layoutX="188.0" layoutY="-17.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" />
+                  <ImageView id="NiniImage" fitHeight="110.0" fitWidth="110.0" layoutX="193.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true" />
+                          <ImageView fx:id="NatashaImage" fitHeight="110.0" fitWidth="110.0" layoutX="193.0" layoutY="135.0" onMouseClicked="#chooseChar" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="Roni" layoutX="188.0" layoutY="125.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" />
+                  <ImageView id="RoniImage" fitHeight="110.0" fitWidth="110.0" layoutX="193.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+                    </children>
+                </Group>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

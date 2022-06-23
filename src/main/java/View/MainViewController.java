@@ -3,7 +3,7 @@ package View;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.media.Media;
+//import javafx.scene.media.Media;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -12,13 +12,13 @@ public class MainViewController extends AView{
     public javafx.scene.control.Button character;
 
 
-    Media openSong = new Media(getClass().getResource("../music/openSong.mp3").toExternalForm());
+    //Media openSong = new Media(getClass().getResource("../music/openSong.mp3").toExternalForm());
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         /*at the init we check if mute is on or off for setting the music*/
         if(!alreadyPlay) {
-            setMusic(openSong);
+            //setMusic(openSong);
             alreadyPlay=true;
         }
     }
